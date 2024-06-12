@@ -1,0 +1,726 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar{
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: size 1.2rem; ; 
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.navbar__container{
+display: flex;
+justify-content: space-between;
+height: 80px;
+z-index: 1;
+width: 100%;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0 50px;
+}
+
+#navbar__logo{
+    background-color:#ff8177 ;
+    background-image: linear-gradient(to top, #d42a2a 0%, #ffffff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.25rem;
+}
+
+.fa-logo {
+    margin-right: 0.5rem;
+}
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item{
+    height: 80px;
+}
+.navbar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding:  0 1.5rem;
+    height: 100%;
+}
+
+.navbar__btn {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #d42a2a;
+    color: #fff;
+}
+
+.button:hover{
+    transition: all 0.3s ease;
+    background: #1c47d6;
+}
+
+.navbar__links:hover{
+    color:#d42a2a;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px){/* this deals with smaller screen */
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0 ;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        top: -1000px;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.5s ease;
+        height: 75vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active{
+        background: #131313;
+        top: 100%;
+        z-index: 99;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    .navbar__toggle .bar{
+      width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        font-size: 2rem;
+    }
+    
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+
+    .navbar__btn{
+        padding-bottom: 2rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+
+    }
+
+    .button{
+        width: 80%;
+        display: flex;
+        justify-content: center;  
+        width: 80%;  
+        height: 65px;
+        align-items: center;
+        font-size: 2rem;
+        margin: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+  
+ .main  {
+    background-color: #141414;
+ }
+
+ .main__container {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 75vh; /*THis determaines how far down the black screen goes */
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+ }
+ .main__content{
+    position: relative;
+    top: 0px;
+
+ }
+
+ .main__content h1 {
+    font-size: 4.5rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #d60000 0%, #ebc9c6 100%);
+    background-size: 100%;
+    -webkit-background-clip:text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+   
+ }
+
+ .main__content h2 {
+    font-size: 4.5rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #a2a5a2 0%, #00c911 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+ }
+
+ .main__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+
+ }
+
+ .main__img--container{
+    text-align: center;
+ }
+ #main__img{
+    height: 95%;/*originally this was 80% */
+    width: 95%;
+    position: relative;
+    top: -25px;
+ }
+
+ @media screen and (max-width: 768px){
+    .main__container{
+        displahy: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        margin: 0 auto;
+        width: 100%;
+        height: 90 vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4 rem;
+    }
+
+    .main__content h1 {
+        font-size: 3rem;
+        margin-top: 1.5 rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;
+    }
+    
+    .main__content p {
+        font-size: 1.5rem;
+        margin-top: 1 rem;
+    }
+
+ }
+
+ @media screen and (max-width: 480px){
+
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3 rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+    
+    .main__content p {
+        font-size: 1.5rem;
+        margin-top: 2 rem;
+    }
+ }
+
+.services{
+background: #141414;   
+display: flex;
+flex-direction: column;
+align-items: center;
+height: fill ;/* this is the height of the services section */
+padding: 5rem 0;
+}
+/* detail the card desighn here, possible 2 by 2 or 4 straight stack or 4 vert */
+.services h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #db392d 0%, #ebc9c6 50%, #9280bd 100%);
+    background-size: 100%;
+    margin-bottom: 2rem ;
+    font-size: 3rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+}
+ 
+.services__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services__card {
+margin: 5px;
+height: 400px;
+width: 400px;
+border-radius: 10px;
+background-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(17,17,17,0.6)100%), 
+url('/images/Presidents/trump\ sq.png');
+background-size: cover;
+color: #fff;
+position: relative;
+padding: 20px;
+}
+
+.services__card:hover{
+    transform: scale(1.025);
+    transition: all 0.2s ease;
+}
+
+.services__card:nth-child(2){
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(17,17,17,0.6)100%), 
+    url('/images/Presidents/Joe\ biden\ sq.png');
+
+}
+.services__card:nth-child(3){
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(17,17,17,0.6)100%), 
+    url('/images/Presidents/RFK\ sq.png');
+
+}
+.services__card:nth-child(4){
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0)0%, rgba(17,17,17,0.6)100%), 
+    url('/images/Presidents/Jill\ Stein\ sq.png');
+
+}
+.services h2 {
+position: absolute;
+top: 300px;
+left: 25px;
+}
+
+.services__card p {
+    position: absolute;
+    top: 330px;
+    left: 25px;
+}
+
+.services__card button {
+color: #fff;
+padding: 10px 20px;
+border: none;
+outline: none;
+border-radius: 4px;
+background: #f11010;
+position: absolute;
+top: 355px;
+left: 25px;
+font-size: 1.1rem;
+cursor: pointer;/* this makes the cursor a hand when hovering over the button */
+}
+
+.services__card button:hover{
+    background: #1c47d6;
+    transition: all 0.25s ease;
+    transform: scale(1.1);/* this makes the button bigger when hovered over */
+}
+
+.footer__container{
+background-color: #141414;
+display: flex;
+padding: 0.5rem 0;
+flex-direction: column;/* this makes the items in the footer stack on top of each other */
+justify-content: center;
+align-items: center;
+}
+
+.footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.footer__links{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    max-width: 1000px;
+}
+.footer__link--wrapper{
+    display: flex;
+}
+.footer__link--items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+.footer__link--items h2{
+    color: #fff;
+}
+.footer__link--items a:hover{
+    color: #f11010;
+    transition: 0.1s ease-out;
+}
+
+/*THis is the end of the dev of landing page(home) and start of Mision Statement page */
+
+.MSMain{
+    background-color: #141414;
+    display: flex;
+    height: 100vh;
+    padding: 5rem 0;
+}
+
+/*THis is the end of the dev of Mission statemnt and start of the DATA page*/
+
+.DMain{
+    background-color: #141414;
+    height: auto;
+}
+
+.DMain__Title{
+height: 15vh;
+}
+.DMain__Title h1{
+    font-size: 3rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #d41d10 0%, #ebc9c6 50%, #532dad 100%);
+    background-size: 100%;
+    font-size: 5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.DMain__Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+}
+.OuterBox{
+margin: 10px;
+height: 400px;
+width: 1250px;
+border-radius: 20px;
+background-color: #363131;
+background-size: cover;
+position: relative;
+display: flex;
+align-items:flex-start;
+padding: 10px;
+}
+
+.OuterBox:hover{
+    transform: scale(1.025);
+    transition: all 0.2s ease;
+}
+#StatLeft{/* THIS SECTION CONTROLLS WHERERERE THE IMAGE IS */
+    height: 350px;/*originally this was 80% */
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+}
+#StatRight{/* THIS SECTION CONTROLLS WHERERERE THE IMAGE IS */
+    height: 350px;/*originally this was 80% */
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+}
+
+
+
+.Description h1{
+
+    background-image: linear-gradient(to top, #200a9e 0%, #87e5e1 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.Description p{
+    color:#ffffff;
+    font-size: 1.25rem;
+   max-width: 450px;
+}
+.DescriptionLeft{
+    position: absolute;
+    top: 50px;
+    right: 40px;
+}
+.DescriptionRight{
+    top: 50px;
+    left: 40px;    
+    position: absolute;
+    
+}
+.DescriptionRight :nth-child(1){
+    background-image: linear-gradient(to top, #0a9e9e 0%, #87e5e1 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+@media (max-width: 1000px) {
+    .DMain__Title{
+        height: fit-content;
+        margin-bottom: 30px;
+        }
+    .OuterBox {
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+    }
+    #StatLeft, #StatRight{
+        height: auto;
+        width: fit-content; /* Ensure the image takes the full width */
+        max-width: 400px; /* Limit the max-width for better readability */
+    }
+    .DescriptionLeft, .DescriptionRight{
+        
+        position: relative;
+        right: 0px;
+        left: auto;
+        top: 300px;
+        max-width: 420px;
+        text-align: center;
+    }
+    .Description h1{
+        font-size: 2.1rem;
+    }
+    .DMain__Title h1{
+        font-size: 3rem;
+    }
+}
+
+/*THis is the end of the dev of the DATA page and start of the about page, and start of DOnald Trump section*/
+
+.Pres__Main{
+    background-color: #141414;
+    height: auto;
+}
+
+.Pres__Title{
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+    top: 15px;
+    
+}
+.Pres__TitleD{
+    background-image: linear-gradient(to right, #d41d10 0%, #ebc9c6 50%, #d41d10 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    font-size: 2.5rem;
+}
+.Pres__TitleB{
+    background-image: linear-gradient(to right, #3e0983 0%, #ebc9c6 50%, #190769 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    font-size: 2.5rem;
+}
+.Pres__TitleR{
+    background-image: linear-gradient(to right, #b310d4 0%, #ebc9c6 50%, #9c10d4 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    font-size: 2.5rem;
+}
+.Pres__TitleS{
+    background-image: linear-gradient(to right, #00cf00 0%, #ebc9c6 50%, #10d41a 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    font-size: 2.5rem;
+}
+.Pres__Total{
+    background-color: #837a7a;
+    border-radius: 5px;
+    max-width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: .5rem;
+
+}
+
+
+.column {
+    float: left;
+    width: calc(33.3333% - 10px);
+    background-color: #363131;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .column:hover{
+    transform: scale(1.025);
+    transition: all 0.2s ease;
+  }
+  .column h1{
+    padding-bottom: 20px;
+    font-size: 2.75rem;
+    background-image: linear-gradient(to top, #c21104 0%, #ebc9c6 60%, #8a80e7 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+   
+  }
+  .column ul{
+    list-style-type: none;
+    color:#ffffff;
+    font-size: 1.15rem;
+    
+  }
+  .column ul li{
+    padding: 10px;
+    white-space: nowrap;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    align-items: center;
+    
+  }
+.Pres__Container{
+    gap: 10px;
+    height: auto;
+    text-align: center;
+}
+ 
+@media screen and (max-width: 800px) {
+    .column {
+      
+    }
+    .column h1{
+        font-size: 1.75rem;
+    }
+    .column ul li{
+        font-size: .65rem;
+    }
+    .Pres__TitleD{
+        font-size: 1.5rem;
+    }
+    .Pres__TitleB{
+        font-size: 1.5rem;
+    }
+    .Pres__TitleR{
+        font-size: 1.5rem;
+    }
+    .Pres__TitleS{
+        font-size: 1.5rem;
+    }
+  }
